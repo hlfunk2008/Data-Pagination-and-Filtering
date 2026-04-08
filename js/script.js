@@ -45,7 +45,7 @@ function addPagination(list) {
 
    // immediately show first page
    let activePage = parseInt(firstBttn.dataset.page);
-   showPage(list, activePage);
+   showPage(data, activePage);
    
    
    
