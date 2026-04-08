@@ -39,8 +39,7 @@ function addPagination(list) {
          `)
    }
    
-   let firstBttn = linkList.firstElementChild;
-   firstBttn.classList.add("active")
+   
    let firstBttn = linkList.firstElementChild;
    firstBttn.classList.add("active");
 
