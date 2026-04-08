@@ -41,6 +41,11 @@ function addPagination(list) {
    let firstBttn = linkList.firstElementChild;
    firstBttn.classList.add("active")
 
+   if (document.querySelector(".active") {
+      showPage(data, window.location.pathname)
+      
+   }
+
    
    linkList.addEventListener("click", (event) => {
       if (event.target instanceof HTMLButtonElement) {
