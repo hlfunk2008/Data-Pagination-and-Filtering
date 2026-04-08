@@ -41,15 +41,14 @@ function addPagination(list) {
    
    let firstBttn = linkList.firstElementChild;
    firstBttn.classList.add("active")
+   let firstBttn = linkList.firstElementChild;
+   firstBttn.classList.add("active");
 
-   document.addEventListener("DOMContentLoaded", () => {
-      let activeBttn = document.querySelector(".active");
-      if (activeBttn) {
-         let activePage = parseInt(activeBttn.dataset.page);
-         showPage(data, activePage)
-      
-      }
-   }
+   // immediately show first page
+   let activePage = parseInt(firstBttn.dataset.page);
+   showPage(list, activePage);
+   
+   
    
    
 
