@@ -37,12 +37,13 @@ function addPagination(list) {
             <button type="button" data-page="${i + 1}">${i + 1}</button>
          `)
    }
-
+   let activeBttn = document.querySelector(".active");
    let firstBttn = linkList.firstElementChild;
    firstBttn.classList.add("active")
 
-   if (document.querySelector(".active") {
-      showPage(data, window.location.pathname)
+   if (activeBttn) {
+      let activePage = parseInt(activeBttn.dataset.page);
+      showPage(data, activePage)
       
    }
 
@@ -51,8 +52,7 @@ function addPagination(list) {
       if (event.target instanceof HTMLButtonElement) {
          // removes classes from those that contain "active" class
          document.querySelectorAll(".active").forEach ((el) => {
-            // uses removeAttribute rather than classList.remove("active") to prevent residual class tag
-            el.removeAttribute("class")
+            el.classList.remove("class")
          })
          event.target.classList.add("active")
          let page = parseInt(event.target.dataset.page)
