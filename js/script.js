@@ -37,15 +37,20 @@ function addPagination(list) {
             <button type="button" data-page="${i + 1}">${i + 1}</button>
          `)
    }
-   let activeBttn = document.querySelector(".active");
+   
    let firstBttn = linkList.firstElementChild;
    firstBttn.classList.add("active")
 
-   if (activeBttn) {
-      let activePage = parseInt(activeBttn.dataset.page);
-      showPage(data, activePage)
+   addEventListener("DOMContentLoaded", () => {
+      let activeBttn = document.querySelector(".active");
+      if (activeBttn) {
+         let activePage = parseInt(activeBttn.dataset.page);
+         showPage(data, activePage)
       
+      }
    }
+   
+   
 
    
    linkList.addEventListener("click", (event) => {
