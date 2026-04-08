@@ -25,8 +25,9 @@ function showPage(list, page) {
    }
 }
 
-let linkList = document.querySelector(".link-list");
+
 function addPagination(list) {
+   let linkList = document.querySelector(".link-list");
    // defines the amount of buttons based on the rounded amount divided by number of items per page
    let numBttn = (Math.ceil(list / itemPerPage))
    
