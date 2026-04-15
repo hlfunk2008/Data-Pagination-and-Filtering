@@ -35,7 +35,9 @@ function addPagination(list) {
 
    for (let i = 0; i < numBttn; i++) {
       linkList.insertAdjacentHTML("beforeend", `
-            <button type="button" data-page="${i + 1}">${i + 1}</button>
+            <li>
+               <button type="button" data-page="${i + 1}">${i + 1}</button>
+            </li>
          `)
    }
    
