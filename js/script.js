@@ -31,6 +31,7 @@ function showPage(list, page) {
 let linkList = document.querySelector(".link-list");
 
 function addPagination(list) {
+   let linkList = document.querySelector(".link-list");
    // defines the amount of buttons based on the rounded amount divided by number of items per page
    let numBttn = (Math.ceil(list / itemPerPage))
    
@@ -56,8 +57,7 @@ function addPagination(list) {
       if (event.target instanceof HTMLButtonElement) {
          // removes classes from those that contain "active" class
          document.querySelectorAll(".active").forEach ((el) => {
-            // uses removeAttribute rather than classList.remove("active") to prevent residual class tag
-            el.removeAttribute("class")
+            el.classList.remove("class")
          })
          event.target.classList.add("active")
          let page = parseInt(event.target.dataset.page)
