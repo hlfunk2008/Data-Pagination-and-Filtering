@@ -50,7 +50,9 @@ function addPagination(list) {
    showPage(data, activePage);
    
    
-   
+   if (document.querySelectorAll(".active")) {
+      showPage(data, firstBttn.dataset.page)      
+   } 
    
 
    
